@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #f4f7f9;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  max-width: 640px;
+  margin: 0 auto 18px;
+  padding: 24px 20px;
+  text-align: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #20c997, #5c7cfa);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 月 → 週 → 日 タブ */
+.view-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #3b5bdb;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #3b5bdb;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background-color: #3b5bdb;
+  color: #fff;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #20c997;
+  padding-left: 10px;
+}
+
+.summary-box {
+  background-color: #eef6ff;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.summary-box p {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.rank-badge {
+  color: #e67700;
+  font-size: 1.2rem;
+}
+
+.reflection-text {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* カレンダーマス（月表示） */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day-cell {
+  border: 1px solid #dce2e8;
+  border-radius: 8px;
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 0.85rem;
+  background-color: #fafbfc;
+  cursor: pointer;
+  min-height: 58px;
+}
+
+.day-cell:hover {
+  border-color: #3b5bdb;
+}
+
+.day-cell.recorded {
+  background-color: #e6fcf5;
+  border-color: #20c997;
+  font-weight: bold;
+}
+
+.day-score {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #3b5bdb;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccd4db;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.primary-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3b5bdb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.secondary-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3b5bdb;
+  background-color: #eef6ff;
+  border: 2px solid #3b5bdb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background-color: #dbeafe;
+}
+.primary-btn:hover {
+  background-color: #2b4acb;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-card {
+  text-align: center;
+  border: 2px solid #20c997;
+}
+
+.score {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #3b5bdb;
+  margin: 8px 0;
+}
+
+.fortune {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e67700;
+  margin-bottom: 10px;
+}
+
+.comment {
+  font-size: 1rem;
+  color: #333;
+}
